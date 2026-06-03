@@ -1,12 +1,13 @@
 import { Router } from "express";
 import { pool } from "../../db";
+import { issueController } from "./issue.controller";
 
 const route = Router();
 
-// route.post("/", userController.createUser);
-// route.get("/", userController.getAllUsers);
-// route.get("/:id", userController.getSingleUser);
-// route.put("/:id", userController.updateUser);
-// route.delete("/:id", userController.deleteUser);
+route.post("/", issueController.createIssue);
+route.get("/", issueController.getAllIssues);
+route.get("/:id", issueController.getSingleIssue);
+route.put("/:id", issueController.updateIssue);
+route.delete("/:id", issueController.deleteIssue);
 
-export const userRoute = route;
+export const issueRoute = route;

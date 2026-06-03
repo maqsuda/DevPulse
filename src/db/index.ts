@@ -12,7 +12,7 @@ export const initDB = async () => {
       id SERIAL PRIMARY KEY,
       name VARCHAR(20),
       email VARCHAR(20) UNIQUE NOT NULL,
-      password VARCHAR(20) NOT NULL,
+      password TEXT NOT NULL,
       role VARCHAR(20) NOT NULL DEFAULT 'contributor' CHECK (role IN ('contributor', 'maintainer')),
  
       created_at TIMESTAMP DEFAULT NOW(),
@@ -20,19 +20,18 @@ export const initDB = async () => {
       `);
 
     await pool.query(`
-  CREATE TABLE IF NOT EXISTS issues (
-  id SERIAL PRIMARY KEY,
-  title TEXT,
-  description TEXT,
-  type VARCHAR(20) CHECK (type IN ('bug', 'maintainer')),
-  status VARCHAR(10) DEFAULT 'open' CHECK (status IN('open', 'in_progress', 'resolved')),
-   reporter_id INT UNIQUE REFERENCES users(id) ON DELETE CASCADE,
+    CREATE TABLE IF NOT EXISTS issues (
+    id SERIAL PRIMARY KEY,
+    title TEXT,
+    description TEXT,
+    type VARCHAR(20) CHECK (type IN ('bug', 'maintainer')),
+    status VARCHAR(15) DEFAULT 'open' CHECK (status IN('open', 'in_progress', 'resolved')),
+    reporter_id INT UNIQUE UNIQUE REFERENCES users(id) ON DELETE CASCADE,
+    created_at TIMESTAMP DEFAULT NOW(),
+    updated_at TIMESTAMP DEFAULT NOW())
+    `);
 
-  created_at TIMESTAMP DEFAULT NOW(),
-  updated_at TIMESTAMP DEFAULT NOW())
-  `);
-
-    console.log("database connected");
+    console.log("Database connected successfully!");
   } catch (error) {
     console.log(error);
   }
