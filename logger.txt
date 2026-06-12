@@ -70,3 +70,101 @@ Method ->POST - Time ->1779621073757 URL ->/api/auth/login
 Method ->POST - Time ->1779621359523 URL ->/api/auth/login
 
 Method ->POST - Time ->1779621394395 URL ->/api/auth/login
+
+Method ->POST - Time ->1780475661523 URL ->/
+
+Method ->POST - Time ->1780475670763 URL ->/
+
+Method ->POST - Time ->1780475715541 URL ->/api/auth/login
+
+Method ->POST - Time ->1780475723454 URL ->/
+
+Method ->GET - Time ->1780475768994 URL ->/api/users
+
+Method ->POST - Time ->1780475837009 URL ->/api/users
+
+Method ->GET - Time ->1780655349403 URL ->/api/users
+
+Method ->GET - Time ->1780655450033 URL ->/api/users
+
+Method ->POST - Time ->1780655944169 URL ->/api/users
+
+Method ->POST - Time ->1780655980925 URL ->/api/users
+
+Method ->GET - Time ->1780657020984 URL ->/api/users
+
+Method ->POST - Time ->1781267104681 URL ->/api/users
+
+Method ->POST - Time ->1781267175624 URL ->/api/users/signup
+
+Method ->POST - Time ->1781267222425 URL ->//api/auth/signup
+
+Method ->POST - Time ->1781267245866 URL ->/api/auth/signup
+
+Method ->GET - Time ->1781267327308 URL ->/api/users
+
+Method ->GET - Time ->1781267416700 URL ->/api/users
+
+Method ->POST - Time ->1781281581765 URL ->/api/issues
+
+Method ->GET - Time ->1781281669760 URL ->/api/issues
+
+Method ->GET - Time ->1781281750691 URL ->/api/issues/1
+
+Method ->GET - Time ->1781281763030 URL ->/api/issues/2
+
+Method ->GET - Time ->1781281837537 URL ->/api/issues/2
+
+Method ->POST - Time ->1781281892906 URL ->/api/issues
+
+Method ->POST - Time ->1781282146796 URL ->/api/auth/signup
+
+Method ->POST - Time ->1781282160235 URL ->/api/auth/signup
+
+Method ->POST - Time ->1781282177913 URL ->/api/issues
+
+Method ->POST - Time ->1781282192101 URL ->/api/issues
+
+Method ->GET - Time ->1781282200436 URL ->/api/issues
+
+Method ->GET - Time ->1781282218564 URL ->/api/issues
+
+Method ->GET - Time ->1781282221737 URL ->/favicon.ico
+
+Method ->GET - Time ->1781282282843 URL ->/api/issues
+
+Method ->GET - Time ->1781282614498 URL ->/api/issues/bug
+
+Method ->GET - Time ->1781282726045 URL ->/api/issues
+
+Method ->GET - Time ->1781282772581 URL ->/api/issues
+
+Method ->GET - Time ->1781283096373 URL ->/api/issues
+
+Method ->GET - Time ->1781283099476 URL ->/api/issues
+
+Method ->GET - Time ->1781283108863 URL ->/api/issues
+
+Method ->GET - Time ->1781283135020 URL ->/api/issues/open
+
+Method ->GET - Time ->1781283236356 URL ->/api/issues/open
+
+Method ->GET - Time ->1781283402609 URL ->/api/issues/open
+
+Method ->GET - Time ->1781283412040 URL ->/api/issues
+
+Method ->GET - Time ->1781284101457 URL ->/api/issues/type=open
+
+Method ->GET - Time ->1781284146745 URL ->/api/issues?type=open
+
+Method ->GET - Time ->1781284301456 URL ->/api/issues?type=open
+
+Method ->GET - Time ->1781284308807 URL ->/api/issues
+
+Method ->GET - Time ->1781284347368 URL ->/api/issues
+
+Method ->GET - Time ->1781284377118 URL ->/api/issues
+
+Method ->GET - Time ->1781284469475 URL ->/api/issues?type=open
+
+Method ->GET - Time ->1781284644961 URL ->/api/issues

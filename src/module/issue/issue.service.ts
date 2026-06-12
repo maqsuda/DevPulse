@@ -1,7 +1,7 @@
 import { pool } from "../../db";
 import type { Iissue } from "./issue.interface";
 
-const createIssueFromDB = async (payLoad: any) => {
+const createIssueFromDB = async (payLoad: Iissue) => {
   const { title, description, type, status, reporter_id } = payLoad;
 
   const issue = await pool.query(
@@ -10,7 +10,7 @@ const createIssueFromDB = async (payLoad: any) => {
     `,
     [reporter_id],
   );
-  console.log("Issue", issue);
+  // console.log("Issue", issue);
   if (issue.rows.length === 0) {
     throw new Error("Issue not exists!");
   }
@@ -27,10 +27,17 @@ const createIssueFromDB = async (payLoad: any) => {
   return result;
 };
 
-const getAllIssueFromDB = async () => {
-  const result = await pool.query(`
-    SELECT * FROM issues
-  `);
+const getAllIssueFromDB = async (payLoad: Iissue) => {
+  const { type, status, reporter_id } = payLoad;
+  const result = await pool.query(
+    `
+    SELECT * FROM issues 
+    WHERE type = COALESCE($1, type)
+    OR status = COALESCE($2, status)
+    ORDER BY created_at ASC;
+  `,
+    [type, status],
+  );
   return result;
 };
 const getSingleIssueFromDB = async (id: string) => {

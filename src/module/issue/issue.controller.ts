@@ -21,9 +21,9 @@ const createIssue = async (req: Request, res: Response) => {
 
 const getAllIssues = async (req: Request, res: Response) => {
   try {
-    const body = req.body;
-
-    const result = await issueService.getAllIssueFromDB();
+    // const body = req.body;
+    console.log(req.body);
+    const result = await issueService.getAllIssueFromDB(req.body);
     res.status(201).json({
       success: true,
       message: "Issues retrived Successfully",
@@ -46,7 +46,7 @@ const getSingleIssue = async (req: Request, res: Response) => {
     if (result.rows.length === 0) {
       res.status(404).json({
         success: false,
-        message: "User Not found!",
+        message: "Data Not found!",
         data: {},
       });
     }
